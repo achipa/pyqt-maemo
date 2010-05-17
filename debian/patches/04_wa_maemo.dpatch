@@ -1,0 +1,24 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03_qsizegrip_check.dpatch by  <renato@>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad pyqt~/sip/QtCore/qnamespace.sip pyqt/sip/QtCore/qnamespace.sip
+--- pyqt~/sip/QtCore/qnamespace.sip	(revision 72)
++++ pyqt/sip/QtCore/qnamespace.sip	(working copy)
+@@ -411,6 +411,12 @@
+ %If (Qt_4_6_2 -)
+         WA_MergeSoftkeysRecursively,
+ %End
++	WA_Maemo5NonComposited,
++	WA_Maemo5StackedWindow,
++	WA_Maemo5PortraitOrientation,
++	WA_Maemo5LandscapeOrientation,
++	WA_Maemo5AutoOrientation,
++	WA_Maemo5ShowProgressIndicator,
+     };
+ 
+     enum ImageConversionFlag
+

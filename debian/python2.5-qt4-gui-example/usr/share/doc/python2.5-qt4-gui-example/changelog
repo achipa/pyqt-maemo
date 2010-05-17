@@ -1,0 +1,1091 @@
+2009/12/11 17:12:52  phil
+Removed an unintended dependency on Qt v4.3.
+
+
+2009/12/09  9:37:38  phil
+All new Qt v4.6 classes are implemented - but not necessarily fully supported
+yet.
+
+
+2009/12/07 20:41:54  phil
+Added support for the new QtCore classes (except for the odd method that needs
+more careful attention).
+
+
+2009/12/07 19:18:26  phil
+Ignore all new header files that don't contribute to the public API.
+
+
+2009/12/07 18:03:44  phil
+Added the gesture related classes to QtGui.
+
+
+2009/12/05 19:36:17  phil
+Addition of some new classes to support updates of existing classes.
+
+
+2009/12/05 14:33:41  phil
+Updated the existing QtWebKit and QtScript classes to Qt v4.6.
+
+
+2009/12/05 12:36:05  phil
+Updated the existing QtTest and QtXmlPatterns classes to Qt v4.6.
+
+
+2009/12/05 12:25:11  phil
+Updated the existing QtSql, QtSvg and QtXML classes for Qt v4.6.
+
+
+2009/12/05 11:55:17  phil
+Updated the existing QtNetwork, QtOpenGL, QtHelp and QtScriptTools classes for
+Qt v4.6.
+
+
+2009/12/04 19:11:53  phil
+Completed the update for existing QtGui classes for Qt v4.6.
+
+
+2009/12/03 22:54:05  phil
+Removed a number of '|' operators for enums that are redundant because of
+QFlags.
+
+
+2009/12/02 20:02:05  phil
+More Qt v4.6 QtGui support.
+
+
+2009/12/02 17:52:38  phil
+Started on the extsing QtGui classes for Qt v4.6.
+
+
+2009/12/02 17:08:39  phil
+The existing QtCore classes have now been updated for Qt v4.6.
+
+
+2009/12/02  5:14:19  phil
+Started to add support for new Qt v4.6 features...
+
+
+2009/12/01 18:41:42  phil
+Switched the build system to Qt v4.6.0.
+
+
+2009/12/01  9:32:52  phil
+Added support for automatically pickling Python objects when used with
+QSettings.
+
+
+2009/11/29 13:15:25  phil
+Added support for gradients to pyuic.
+
+
+2009/11/26 17:37:37  phil
+A QHostAddress.SpecialAddress can be used whenever a QHostAddress is expected.
+
+
+2009/11/25  9:32:16  phil
+Added support for Qt's NO_PRINTPREVIEWDIALOG and NO_SYSTEMTRAYICON features.
+
+
+2009/11/23 17:41:10  phil
+Added support in the QEvent %ConvertToSubClassCode for a number of events
+added since Qt v4.2.
+
+
+2009/11/23 11:08:00  phil
+Fixed a missing exception when trying to read a persisted PyQt_PyObject.
+
+
+2009/11/21 17:41:40  phil
+Updated the docs regarding keyword arguments.
+
+
+2009/11/21 15:52:30  phil
+Updated the metasip project to mark all arguments as being unnamed.
+
+
+2009/11/21 11:45:24  phil
+Added support for Qt's NO_PRINTER, NO_PRINTDIALOG and NO_PRINTPREVIEWWIDGET
+features.
+configure.py will now treat Maemo's Qt license as GPL compatible.
+
+
+2009/11/18 11:47:37  phil
+Finally fixed the quoting of translatable and non-translatable strings.
+
+
+2009/11/17 23:03:58  phil
+Added test_gc_slots.py to the test suite.
+
+
+2009/11/16 18:00:08  phil
+Updated qdoc3 from Qt v4.5.3.
+
+
+2009/11/15 18:18:02  phil
+Fixed the argument type of QClipboard.connectNotify().
+
+
+2009/11/15 14:01:31  phil
+Clarified a pylupdate error messages when parsing an empty triple-quoted
+string.  (This is less risky than attempting to properly fix the parser.)
+
+
+2009/11/14 18:41:09  phil
+Added support for docstrings for new-style signals.
+
+
+2009/11/11 21:03:33  phil
+Added repr() implementations to unbound and bound signals.
+
+
+2009/11/11 17:53:25  phil
+All docstrings (for the default APIs) should now be complete and accurate.
+
+
+2009/11/11 10:46:14  phil
+Added %Docstring to all functions annotated with /NoArgParser/.
+
+
+2009/11/09 19:14:30  phil
+Applied /DocType/ to all SIP_PYLIST and SIP_PYTUPLE arguments.
+
+
+2009/11/09 17:20:39  phil
+Applied the /DocValue/ annotation where needed.
+
+
+2009/11/09 13:48:51  phil
+Added /DocType/ annotations to all places that are different for Python v3.
+
+
+2009/11/08 14:10:13  phil
+Applied the new /DocType/ annotation in most applicable places.
+
+
+2009/11/06 18:44:45  phil
+Automatic generation of docstrings is now enabled by default.  --no-docstrings
+will disable them.
+
+
+2009/11/05  9:46:29  phil
+Fixed a pyuic bug handling non-translatable strings containing a backslash.
+
+
+2009/11/02 18:54:14  phil
+Removed a use of basestring in pyuic.
+
+
+2009/11/02 15:52:15  phil
+Fixed QObject.findChild() and QObject.findChildren() which were doing bad
+things with the ownership of objects they were finding.
+
+
+2009/11/02  9:15:23  phil
+Fixed a regression introduced when adding support for out-of-tree builds that
+broke the installation of the uic module.
+
+
+2009/10/28 22:13:49  phil
+Fixed a regression in the handling of QObject.destroyed() being connected via a
+proxy that meant that the proxied callable never got invoked because the
+proxy was being destroyed too soon.
+
+
+2009/10/28 17:56:29  phil
+Added support for out-of-tree building (for standard builds).
+
+
+2009/10/28 10:46:14  phil
+Specified v1 of the QVariant API for the QDataStream << and >> operators which
+were breaking the puzzle.py examples.
+
+
+2009/10/28  7:49:23  phil
+On Linux and MacOS/X "protected" is now redefined as "public" during
+compilation.  This means QtGui.so is more than 28% smaller.
+
+
+2009/10/26 12:43:32  phil
+Fixed a bug in the handling of unknown Qt property or signal.
+Documented support for keyword arguments.
+
+
+2009/10/26 12:20:34  phil
+Enabled support for keyword arguments.  This adds less that 5% to the size of
+the QtGui module.
+
+
+2009/10/26  8:53:20  phil
+Merged v4.6.1 back into the trunk.
+
+
+2009/10/23 13:47:27  phil
+Released as v4.6.1.
+
+
+2009/10/23 13:45:42  phil
+Fixed a bug in the capabilities.py example triggered by the QVariant v2 API.
+
+
+2009/10/23 12:48:37  phil
+Fixed a problem deleting slot proxies when the interpreter has been finalised
+but Qt is still tidying up.
+
+
+2009/10/23 11:45:42  phil
+Fixed the detection of the phonon module in Qt v4.5.3 (which only seems to be
+a problem on Windows).
+
+
+2009/10/20 11:58:07  phil
+Hopefully finally fixed the regression where slot proxies were being deleted
+too soon when disconnect() was called from within the slot.  (With much help
+from Hans-Peter Jansen.)
+
+
+2009/10/14 16:19:06  phil
+Eliminated the compiler warning messages related to qDebug() and friends.
+A number of private copy ctors added manually (and temporarily) to allow
+building against Qt v4.6.0-beta1.
+
+
+2009/10/13  8:44:03  phil
+Fixed a pyuic bug with QHeaderView.setSortIndicatorShown().
+
+
+2009/10/10 12:20:10  phil
+Added the QMacCocoaViewContainer class.
+
+
+2009/10/10 10:38:50  phil
+Updated sandbox from Mark Summerfield.
+
+
+2009/10/09 19:53:50  phil
+Fixed a premature delete that affected QTimer.singleShot().
+
+
+2009/10/09  6:14:41  phil
+Reverted the /Constrained/ annotation on QClipboard.text() for the QString v1
+API as a mutable QString is only needed if the initial value is null.
+Therefore allowing an ordinary string won't lose information.
+
+
+2009/10/07 22:37:06  phil
+Added the missing QGraphicsSceneDragDropEvent.setDropAction().
+
+
+2009/10/07 18:05:59  phil
+Fixed a problem connecting short-circuit signals in a different thread to the
+one the emitter is in.
+
+
+2009/10/07 17:09:56  phil
+Fixed a problem passing an invalid QVariant as an argument to emit().
+
+
+2009/10/07 16:06:15  phil
+Fixed a couple of error messages in the emit code.
+
+
+2009/10/07 14:47:42  phil
+Fixed a typo in the API selection documentation.
+
+
+2009/10/07 14:44:28  phil
+Added a missing /Transfer/ from QFileDialog.setProxyModel().
+
+
+2009/10/02  9:43:58  phil
+Switched to Qt v4.5.3.
+
+
+2009/10/01 22:31:45  phil
+Added more includes of QHash.
+
+
+2009/10/01 15:30:31  phil
+Added a (possibly) missing include of QHash in QUrl.
+
+
+2009/09/28 19:15:05  phil
+Set the right qmake CONFIG value for x86_64 on MacOS.
+
+
+2009/09/26 16:13:12  phil
+Released as v4.6.
+
+
+2009/09/23 22:28:35  phil
+Added compileUiDir() to the uic module.
+
+
+2009/09/23  9:02:32  phil
+Clarified the documentation regarding the compatibility of pyuic4 generated
+code.
+
+
+2009/09/19 11:57:48  phil
+Fixed a problem with the recent changes to fully support QGridLayout when
+loading .ui files with loadUi().
+
+
+2009/09/18 18:22:08  phil
+Added a missing cast (needed by MinGW) to the QString conversion code.
+
+
+2009/09/18  9:36:13  phil
+Added widthChar() and boundingRectChar() to QFontMetrics and QFontMetricsF for
+v2 of the QString API.  These are needed because width() and boundingRect()
+give different results for a QChar and a QString of length one.
+
+
+2009/09/17 22:06:02  phil
+Made the width() and boundingRect() QChar overloads specific to v2 of the
+QString API.
+
+
+2009/09/17 19:13:22  phil
+Reenabled the QChar overloads of the width() and boundingRect() methods of
+QFontMetrics and QFontMetricsF as they are not the equivalent of a single
+character QString.
+
+
+2009/09/17  9:40:03  phil
+Invalid keyword arguments to a QObject ctor now raise an exception (as they do
+with pyqtConfigure()).
+
+
+2009/09/16 15:06:38  phil
+Documented the additional QVariant incompatibility that it no longer keeps a
+reference to QObject instances.
+
+
+2009/09/14 12:12:49  phil
+Further fixes for Snow Leopard on 64 bit systems.
+Added QObject.pyqtConfigure().
+
+
+2009/09/12 17:39:10  phil
+Fixed pyuic4 for the minimum width and height for columns and rows, and column
+and row spacing.
+
+
+2009/09/12 13:28:05  phil
+configure.py no longer assumes that an explicit architecture means a universal
+binary.
+
+
+2009/09/12  3:10:03  phil
+Added the --use-arch command line option to configure to force MacOS python to
+use a particular architecture.
+Added missing operating system names (Snow Leopard and Windows 7).
+
+
+2009/09/09  8:33:12  phil
+Fixed a couple of bugs in the samplebuffers.py example.
+
+
+2009/09/06 22:32:02  phil
+Qt properties can be initialised and signals connected by passing keyword
+arguments when an instance is created.
+
+
+2009/09/03 18:25:16  phil
+Changes needed by SIP's extended assignment helper functionality.
+
+
+2009/09/02 20:33:00  phil
+Added the /Array/ and /ArraySize/ annotations to the drawLines(),
+drawPoints(), drawPolygon() and drawRects() methods of QPaintEngine (although
+SIP doesn't support them yet).
+
+
+2009/08/23 12:56:29  phil
+Fixed the line numbers in .ts files.
+
+
+2009/08/21 18:52:28  phil
+Fixed pylupdate's broken handling of Python comments.
+
+
+2009/08/21 14:57:40  phil
+Added a missing /Transfer/ to QSyntaxHighlighter.setCurrentBlockUserData().
+
+
+2009/08/19  8:00:42  phil
+Fixed the QString buffer protocol implementation for Python v2.x built with
+UCS4 support.
+
+
+2009/08/18 16:50:37  phil
+Added a missing /Transfer/ to QTreeWidget.setItemWidget().
+
+
+2009/08/18 16:33:29  phil
+pyuic now uses the Python implementation of ElementTree so that it handles
+XML provided in a StringIO.
+
+
+2009/08/11 14:34:17  phil
+Fixed QGraphicsLinearLayout.removeAt() as Qt doesn't always return ownership
+to the caller as the documentation claims.
+
+
+2009/08/11 13:41:52  phil
+Removed the remaining calls to deleteLater() in the slot/signal proxy code.
+
+
+2009/08/11 12:16:24  phil
+Fixed a similar regression.
+
+
+2009/08/11 11:48:03  phil
+Fixed a regression introduced when getting the QVariant v2 API working with Qt
+registered meta-types.
+
+
+2009/08/11 11:36:22  phil
+Signal/slot proxies are now deleted as soon as possible to reduce the use of
+deleteLater().
+
+
+2009/08/10 19:34:15  phil
+Minor improvements to the storing of proxy slot objects.
+
+
+2009/08/09 22:29:12  phil
+QAbstractFileEngine, QTextDecoder, QTextEncoder and QSqlResult now have
+sip.wrapper as their super-type as they all can be returned by virtual
+factories which use the object ownership infrastructure.
+
+
+2009/08/08 21:41:19  phil
+Use memcpy() instead of Py_UNICODE_COPY() because Py_MEMCPY() is broken on
+Windows with C++.
+
+
+2009/08/08 18:43:11  phil
+Updated the demos examples for the QString v2 API.
+
+
+2009/08/08 18:20:03  phil
+Updated the designer examples for the QString v2 API.
+
+
+2009/08/08 17:58:42  phil
+Updated the desktop examples for the QString v2 API.
+
+
+2009/08/08 17:25:44  phil
+Updated the dialogs examples for the QString v2 API.
+
+
+2009/08/08 14:34:14  phil
+Updated the draganddrop examples for the QString v2 API.
+
+
+2009/08/08 13:51:21  phil
+Updated the graphicsview examples for the QString v2 API.
+
+
+2009/08/08 12:53:42  phil
+The QVariant support will now properly handle SIP wrapped types that Qt
+registers (eg. QGraphicsScene).
+
+
+2009/08/07 23:01:00  phil
+Updated the itemviews examples for the QString v2 API.
+
+
+2009/08/07 17:50:34  phil
+Updated the layouts examples for the QString v2 API.
+
+
+2009/08/07 17:43:16  phil
+Updated the mainwindows examples for the QString v2 API.
+
+
+2009/08/07 13:19:30  phil
+Updated the network examples for the QString v2 API.
+
+
+2009/08/07 11:29:07  phil
+Updated the opengl examples to the QString v2 API.
+
+
+2009/08/07  9:57:42  phil
+Updated the painting examples for the QString v2 API.
+
+
+2009/08/06 23:29:44  phil
+Updated the phonon examples for the QString v2 API.
+
+
+2009/08/06 22:40:37  phil
+Updated the richtext examples for the QString v2 API.
+
+
+2009/08/06 21:59:30  phil
+Updated the sql and script examples for the QString v2 API.
+
+
+2009/08/06 21:47:16  phil
+Updated the threads examples for the QString v2 API.
+
+
+2009/08/06 18:52:36  phil
+Added a cast to the new QString conversion code.
+Updated the tools examples for the QString v2 API.
+
+
+2009/08/06  0:11:59  phil
+Fixed the conversions between QString and Unicode objects for code points
+greater than 0xffff when Python is built with --enable-unicode=ucs4.
+
+
+2009/08/05 19:26:45  phil
+Removed QTextStream.operator<<(const QChar &) as it is not needed and gets in
+the way when being passed a string of more than one character.
+Updated the tutorials examples for the QString v2 API.
+
+
+2009/08/05 15:32:54  phil
+Updated the widgets examples for v2 of the QString API.
+
+
+2009/08/05 11:45:14  phil
+Updated the XML examples for the new QString APIs.
+
+
+2009/08/04 17:12:31  phil
+A quick pass through the examples converting the minor stuff to v2 of the
+QString API.
+
+
+2009/08/04 16:21:03  phil
+Removed calls to QString() from pyuic to make it API version independent.
+
+
+2009/08/04 16:17:14  phil
+Python v2.6 and later allow a bytearray to be used whenever a QByteArray is
+expected.
+
+
+2009/08/04 15:49:18  phil
+Fixed the validate methods of QAbstractSpinBox, QDateTimeEdit, QDoubleSpinBox,
+QDoubleValidator, QIntValidator, QRegExpValidator, QSpinBox and QValidator for
+v2 of the QString API.
+
+
+2009/08/04 14:28:35  phil
+Fixed the fixup() methods of QAbstractSpinBox, QDateTimeEdit, QDoubleSpinBox,
+QSpinBox and QValidator for v2 of the QString API.
+
+
+2009/08/04 13:03:07  phil
+Fixed QClipboard for the QString v2 API.
+
+
+2009/08/04 12:43:48  phil
+Added the getOpenFileNameAndFilter(), getOpenFileNamesAndFilter() and
+getSaveFileNameAndFilter() static methods to QFileDialog.
+The getOpenFileName(), getOpenFileNames() and getSaveFileName() static methods
+of QFileDialog don't take a mutable QString argument to return the selected
+filter for v2 of the QString API.
+
+
+2009/08/04  0:28:01  phil
+Fixed QWebPage.javaScriptPrompt() for the v2 QString API.
+
+
+2009/08/03 16:14:36  phil
+Fixed QTextStream for v2 of the QString API.
+
+
+2009/08/03 15:05:21  phil
+Removed QTextDecoder::toUnicode(QString *target, const char *chars, int len)
+from the QString v2 API.
+
+
+2009/08/03 13:48:17  phil
+Removed QXmlStreamWriter(QString *string) from the QString v2 API.
+
+
+2009/08/02 21:31:45  phil
+qt_set_sequence_auto_mnemonic() is now OS/X specific.
+
+
+2009/08/02 21:09:50  phil
+v2 of the QString API now converts between a null QString and None.
+
+
+2009/08/02 19:02:18  phil
+Removed overloads of QXmlQuery.evaluateTo() that take pointers to QStringList
+and QString as they won't work with the v2 QString API.  If anybody notices we
+can implement something with handwritten code.
+
+
+2009/08/02 18:16:33  phil
+Added the v2 implementation of QStringList.
+
+
+2009/08/02 16:20:16  phil
+Removed the qwt.py plugin for pyuic as one is now included with PyQwt.
+
+
+2009/08/02 15:39:24  phil
+A QLatin1String can now be passed whenever a QString is expected.
+Removed all overloads that took a QLatin1String where there is an equivalent
+that takes a QString (ie. all of them).
+Removed QLatin1String from the v2 QString API.
+
+
+2009/08/02 14:47:58  phil
+Removed QLatin1Char from the QString v2 API.
+
+
+2009/08/02 14:28:29  phil
+Added the v2 API support for QChar.
+Removed the fromUnicode() and convertFromUnicode() methods that take an array
+of QChar from QTextCodec.  This means an incompatibility as QTextCodec is now
+abstract and cannot be sub-classed - but doing so before would never have
+worked anyway.
+
+
+2009/08/02 13:45:07  phil
+Removed the width() and boundingRect() methods of QFontMetrics and
+QFontMetricsF that take QChar arguments as they can be handled by the
+overloads that take a QString.
+
+
+2009/08/02 12:24:42  phil
+Removed QStringMatcher from v2 of the QString API.
+
+
+2009/08/01 22:03:55  phil
+Fixed a couple of typos in the changed QString handwritten code.
+
+
+2009/07/31 16:42:24  phil
+Added the basic support for v2 API for QString and QStringRef.
+
+
+2009/07/30  9:58:35  phil
+Added missing /Transfer/ annotations to QBoxLayout.addSpacerItem() and
+QBoxLayout.insertSpacerItem().
+
+
+2009/07/27 19:03:52  phil
+Fixed the super-class for QGLContext as it takes part in parent/child
+relationships.
+
+
+2009/07/24 17:27:18  phil
+Fixed the highlightedtextedit.py example.
+configure.py gives precedence to the directory containing sip.h to that
+containing Python.h (as the latter may include a distro supplied sip.h).
+
+
+2009/07/20 11:39:23  phil
+QVariant.toPyObject() now recurses through any collections.
+
+
+2009/07/17 13:57:55  phil
+Cleared a benign exception raised with bound signals that numpy was noticing.
+
+
+2009/07/12 18:34:58  phil
+Added the two QImage ctors that take non-const data as a void *.
+
+
+2009/07/12 18:17:18  phil
+Added a missing /Transfer/ to QTableWidget.setItemPrototype().
+
+
+2009/07/12 18:06:20  phil
+Fixed a bug in the chart.py example.
+Added support for QHeaderView to pyuic.
+Fixed support for stretch in a layout containing widgets in pyuic.
+
+
+2009/07/09 17:03:44  phil
+Fixed bugs in the conversions of QVariantList, QVariantMap and QVariantHash.
+
+
+2009/07/09 12:20:35  phil
+Expose the pyqtWrapperType meta-type.
+Allow meta-type to be used with with ordinary Python classes, not just SIP
+generated classes.
+
+
+2009/07/08 15:05:12  phil
+Converted the codecs.py, regexp.py, settingseditor.py, charactermap.py,
+icons.py, scribble.py and saxbookmarks.py to the QVariant v2 API.
+
+
+2009/07/08 12:26:45  phil
+Converted the cachedtable.py, querymodel.py, relationaltablemode.py and
+tablemodel.py examples to the QVariant v2 API.
+
+
+2009/07/07 18:14:54  phil
+Added the static functions to the QVariant v2 API.
+
+
+2009/07/07 10:56:13  phil
+Applied the new /AllowNone/ annotation to the v1 implementation of QVariant.
+Changed fetchmore.py, simpledommodel.py and simpletreemodel.py as they are now
+independent of the QVariant API.
+
+
+2009/07/06 20:03:32  phil
+Converted the application.py, mdi.py, recentfiles.py and sdi.py examples to
+the QVariant v2 API.
+
+
+2009/07/06 19:42:26  phil
+Converted the fetchmore.py, pixelator.py, puzzle.py, simpledommodel.py,
+simpletreemodel.py and spinboxdelegate.py to the QVariant v2 API.
+
+
+2009/07/06 19:14:40  phil
+Converted the diagramscene.py, dragdroprobot.py, padnavigator.py,
+basicsortfiltermodel.py, chart.py and editabletreemodel.py examples to the
+QVariant v2 API.
+Fixed a regression in pyuic when populating a QTreeWidget.
+
+
+2009/07/06 12:42:11  phil
+Converted the webbrowser.py, puzzle.py, plugins.py, qtdemo.py and systray.py
+examples to the QVariant v2 API.
+
+
+2009/07/03 16:14:47  phil
+Fixed a problem converting large 32 bit unsigned values to a QVector.
+
+
+2009/07/03 14:08:57  phil
+Added support to pyuic for stretch in box layouts.
+
+
+2009/06/28 19:11:36  phil
+Added the Type enum to the v2 API of QVariant.
+
+
+2009/06/27 16:05:06  phil
+Fixed a problem setting a QVariant property.
+
+
+2009/06/27 15:48:55  phil
+Allow QVariant to be used as a property type.
+
+
+2009/06/27 13:05:25  phil
+Added the QAxContainer module to the GPL package as it's now included in the
+LGPL Qt v4.5.2.
+Fixed the webbrowser.py example.
+Added a workaround to a qmake regression in Qt v4.5.2 when building static
+libraries.
+
+
+2009/06/26 17:40:59  phil
+Fixed the license checks for Qt v4.5.2.
+
+
+2009/06/25 22:25:52  phil
+Updated for Qt v4.5.2.
+
+
+2009/06/24 11:45:03  phil
+Match the maintenance branch changes to QVariant while we think about how to
+implement the v2 API.
+
+
+2009/06/23 22:10:18  phil
+Fixed a regression in converting Python objects to QVariant containers.
+
+
+2009/06/22 20:34:19  phil
+Fixed the locale independent upper-case conversion regression in pyuic
+introduced when porting to Python v3.
+Fixed a pyuic bug handling spacers in QFormLayouts.
+
+
+2009/06/22 16:47:28  phil
+Documented the QVariant API versions.
+
+
+2009/06/21 10:18:53  phil
+QHash templates were still using the old types API.
+Removed an unused variable in the QVariant handwritten code.
+
+
+2009/06/20 18:50:34  phil
+Added the v2 API for QVariant.
+
+
+2009/06/18 18:53:33  phil
+Implemented the QTextStream API to handle the bin(), hex() and oct() name
+clashes.
+
+
+2009/06/18 11:43:33  phil
+Implemented the different __hash__ APIs.
+
+
+2009/06/17 11:58:30  phil
+Added the %API directive defaulting to v2 for Python3 and v1 for Python2.
+SIP v4.9 is now required.
+
+
+2009/06/17 11:44:10  phil
+Merged v4.5.1 into the trunk.
+
+
+2009/06/16  9:32:22  phil
+Released as v4.5.1.
+
+
+2009/06/16  9:21:01  phil
+Only convert exact dicts to a QVariantMap and back and not dict sub-classes.
+
+
+2009/06/14 14:57:37  phil
+Removed an assertion when building dynamic meta-objects, instead just ignore
+the attribute if it doesn't have the expected type.
+
+
+2009/06/13 11:29:17  phil
+Fixed the handling of QWizard by pyuic.
+
+
+2009/06/12 17:28:44  phil
+Changed the SIP dependency to v4.8.1 (not necessary but we don't want it to
+survive in the wild).
+Changed the roadmap to show how incompatible APIs will be selected.
+
+
+2009/06/12  9:09:41  phil
+Fixed __str__ for QByteArray for Python v3 so it is consistent with Python v2.
+
+
+2009/06/12  8:23:23  phil
+Reverted the roadmap change about __hash__ being an incompatibile change.  The
+issue isn't that the hash function has changed (which isn't considered a
+compatibility problem) it's that different objects that previously had a
+different hash value (based on their id()) now might have the same hash value.
+
+
+2009/06/11 22:16:19  phil
+Updated the roadmap to show that the __hash__ additions (including QUrl) are
+not now considered incompatible changes.
+
+
+2009/06/11 14:20:11  phil
+Removed the Python v3 buffer protocol support for QString.
+
+
+2009/06/09 22:25:27  phil
+Improved the implementation of the Python v3 buffer protocol for QByteArray.
+
+
+2009/06/09 17:42:14  phil
+Fixed a pyuic problem with Python v3 when setting the tab order.
+
+
+2009/06/09 16:41:36  phil
+Added /Transfer/ to QComboBox.setLineEdit().
+Added /KeepReference/ to setValidator() and setCompleter() for QLineEdit and
+QComboBox.
+
+
+2009/06/09 16:04:50  phil
+Added the missing setCoordinateMode() and coordinateMode() methods from
+QGradient.
+
+
+2009/06/05  9:40:16  phil
+Released as v4.5.
+
+
+2009/06/04 22:36:11  phil
+Another (final) go at fixing QAbstractItemModel.createIndex().
+
+
+2009/06/04 21:38:38  phil
+Changed the implementation of QModelIndex.internalId() to match that of the
+id() builtin - and let Python handle the portabilty issues.
+
+
+2009/06/04 18:05:02  phil
+Removed the /KeepReference/ annotation from QAbstractItemModel.createIndex()
+as the extra reference should really be associated with the returned
+QModelIndex.
+
+
+2009/06/04 14:53:46  phil
+Hopefully finally fixed QModel.internalId() and
+QAbstractItemModel.createIndex() for all platforms.
+
+
+2009/06/03 22:29:54  phil
+Treat QModelIndex.internalId() and a quint64 rather than qint64.
+
+
+2009/06/03 17:12:23  phil
+Use the Qt v4.2.0 and later version of QAbstractItemModel.createIndex().
+
+
+2009/06/01 14:31:16  phil
+Backed out QFlags.testFlag() because of some problem with PyKDE4 (and no time
+to investigate further).
+
+
+2009/06/01 10:17:36  phil
+QVector<unsigned> now creates Python long objects to ensure values stay
+unsigned on 32 bit systems.
+
+
+2009/05/29 16:04:00  phil
+Eliminated more warning messages.
+
+
+2009/05/29 12:56:59  phil
+Eliminated some compiler warning messages - particularly for Python v2.4.
+
+
+2009/05/27 22:59:18  phil
+Added the graphicssystems plugins to the Windows installer.
+
+
+2009/05/27 13:25:58  phil
+Some fixes for the OpenGL examples from Francis Cho.
+
+
+2009/05/26 23:42:52  phil
+Added support for QWizard and QWizardPage to pyuic.
+
+
+2009/05/26 15:15:30  phil
+Added the missing QFlags.testFlag().
+Added a convenience QFlags(int) ctor.
+
+
+2009/05/26 12:55:34  phil
+Expanded the documentation describing the slight changes in QVariant handling.
+
+
+2009/05/26 11:53:15  phil
+Added the /KeepReference/ annotations to all methods that set factories,
+delegates or icon providers.
+
+
+2009/05/25 18:29:13  phil
+Removed the unused installers and build documentation.
+Moved from __nonzero__ to __bool__.
+
+
+2009/05/20 11:27:41  phil
+QVariant.toPyObject() now raises an exception if the QVariant is invalid.
+
+
+2009/05/18  0:14:02  phil
+Fixed a deadlock between the GIL and Qt's internal thread mutex when a slot
+proxy is calling QObject::sender() while holding the GIL.
+
+
+2009/05/17 17:19:37  phil
+Fixed a typo in pyuic in the handling of filter plugins.
+
+
+2009/05/17 16:54:14  phil
+Added the fetchmore.py example from Darryl Wallace.
+
+
+2009/05/07 14:52:50  phil
+Fixed the new qtdemo for OS/X.
+
+
+2009/05/06 20:44:44  phil
+Removed a couple of compiler warning messages.
+
+
+2009/05/06 15:00:47  phil
+Fixed a configure.py bug that meant the DBus detection was broken.
+
+
+2009/05/04 19:02:00  phil
+Fixed bugs in the Designer plugin example widgets introduced when converting to
+the new signal API.
+
+
+2009/05/04 16:49:16  phil
+Fixed a silly configure.py bug related to the new -py3 pyrcc flag.
+
+
+2009/05/04 15:49:09  phil
+Had second thoughts about pyrcc4 and added the -py2 flag and made it the
+default.
+
+
+2009/05/04 15:26:51  phil
+Added support for QT_TR_NOOP_UTF8 to QtCore and pylupdate4.
+
+
+2009/05/04 13:55:20  phil
+Various Windows installer fixes.
+The new qtdemo example now works with Python v3.
+
+
+2009/05/02  9:53:03  phil
+Added some unit tests that (hopefully) prove that the recent Chimera changes
+don't affect Python sub-classes.
+
+
+2009/05/01 15:30:21  phil
+Chimera now handles all QWidget and QObject sub-classes as QWidgetStar and
+QObjectStar (not just QWidget and QObject themselves).
+
+
+2009/05/01 14:13:20  phil
+Reinstanted QString(const QByteArray &) now that a QByteArray isn't
+automatically converted to a QString.
+
+
+2009/05/01  9:39:52  phil
+In Python v3, Chimera now handles bytes and bytearray objects as QByteArrays
+rather then QStrings.
+
+
+2009/04/30 22:11:06  phil
+Explicity set %DefaultSupertype in each module now that it doesn't affect
+importing modules.
+
+
+2009/04/30 18:01:44  phil
+Fixed the issue with Assistant and the new qtdemo.
+Fixed some of the example READMEs to make sure they had at least three
+interesting paragraphs.
+Removed the old qtdemo.
+Added the new addressbook tutorial.
+Removed the old tutorial.
+Fixed some GIL issues when creating PyQtProxy instances.
+
+
+2009/04/29 17:14:47  phil
+Latest qtdemo patch from Grissiom.
+qtdemo animation fix from me.
+
+
+2009/04/28 22:20:14  phil
+Some updates to the Windows installer.
+More qtdemo fixes - everything now seems to (sort of) work.
+
+
+2009/04/27 20:42:53  phil
+Updated the roadmap to remove QByteArray from the list of classes to be removed
+in the v2 API.  If it was removed then we couldn't implement the different
+QSvgRenderer ctors (for example).
+

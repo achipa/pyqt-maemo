@@ -1,0 +1,52 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03_qsizegrip_check.dpatch by  <renato@>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad pyqt~/sip/QtGui/QtGuimod.sip pyqt/sip/QtGui/QtGuimod.sip
+--- pyqt~/sip/QtGui/QtGuimod.sip	2008-08-08 11:10:05.000000000 -0300
++++ pyqt/sip/QtGui/QtGuimod.sip		2008-09-16 17:31:40.000000000 -0300
+@@ -198,7 +198,7 @@
+ %Include qscrollbar.sip
+ %Include qsessionmanager.sip
+ %Include qshortcut.sip
+-%Include qsizegrip.sip
++//%Include qsizegrip.sip
+ %Include qsizepolicy.sip
+ %Include qslider.sip
+ %Include qsortfilterproxymodel.sip
+diff -urNad pyqt~/sip/QtGui/qapplication.sip pyqt/sip/QtGui/qapplication.sip
+--- pyqt~/sip/QtGui/qstyleoption.sip	2008-08-08 11:10:05.000000000 -0300
++++ pyqt/sip/QtGui/qstyleoption.sip	2008-09-16 17:31:40.000000000 -0300
+@@ -1569,29 +1569,6 @@
+ %End
+ %If (Qt_4_2_0 -)
+ 
+-class QStyleOptionSizeGrip : QStyleOptionComplex
+-{
+-
+-%TypeHeaderCode
+-#include <qstyleoption.h>
+-%End
+-
+-public:
+-    enum StyleOptionType
+-    {
+-        Type,
+-    };
+-
+-    enum StyleOptionVersion
+-    {
+-        Version,
+-    };
+-
+-    Qt::Corner corner;
+-    QStyleOptionSizeGrip();
+-    QStyleOptionSizeGrip(const QStyleOptionSizeGrip &);
+-};
+-
+ %End
+ %If (Qt_4_2_0 -)
+ 

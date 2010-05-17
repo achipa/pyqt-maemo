@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 01_qreal.dpatch by  <renato@>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad pyqt~/sip/QtCore/qglobal.sip pyqt/sip/QtCore/qglobal.sip
+--- pyqt~/sip/QtCore/qglobal.sip	2008-08-08 11:10:05.000000000 -0300
++++ pyqt/sip/QtCore/qglobal.sip		2008-09-16 17:04:36.000000000 -0300
+@@ -59,7 +59,7 @@
+ typedef unsigned long long quint64;
+ typedef qint64 qlonglong;
+ typedef quint64 qulonglong;
+-typedef double qreal;
++typedef float qreal;
+ typedef unsigned char uchar;
+ typedef unsigned short ushort;
+ typedef unsigned int uint;

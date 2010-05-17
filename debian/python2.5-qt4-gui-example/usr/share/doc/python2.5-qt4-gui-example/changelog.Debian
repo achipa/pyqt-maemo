@@ -1,0 +1,102 @@
+python-qt4 (4.6.2-maemo20091218.0) unstable; urgency=low
+
+  * phonon/webkit REALLY fixed
+  * examples packages
+  * pyqt-gui-example to install gui and core modules via HAM
+  * pyqt-all-examples to install all modules via HAM
+  * brought up to date with trunk (which is now Qt 4.6 capable)
+
+ -- Attila Csipa <maemo@csipa.in.rs>  Wed, 30 Nov 2009 12:10:22 +0100
+
+python-qt4 (4.6.2-maemo20091123.2) unstable; urgency=low
+
+  * Manual phonon dependency to allow phonon/webkit module build
+
+ -- Attila Csipa <maemo@csipa.in.rs>  Wed, 30 Nov 2009 12:10:22 +0100
+
+python-qt4 (4.6.2-maemo20091123.1) unstable; urgency=low
+
+  * Qt4.6 package compatibility + patches pushed upstream
+
+ -- Attila Csipa <maemo@csipa.in.rs>  Wed, 29 Nov 2009 23:44:54 +0100
+
+python-qt4 (4.6.2-maemo20091123.0) unstable; urgency=low
+
+  * Update to upstream 4.6.2
+
+ -- Attila Csipa <maemo@csipa.in.rs>  Wed, 25 Nov 2009 01:01:05 +0100
+
+python-qt4 (4.6.1-maemo0) unstable; urgency=low
+
+  * Fremantle version
+
+ -- Attila Csipa <maemo@csipa.in.rs>  Tue, 03 Nov 2009 10:19:50 +0100
+
+python-qt4 (4.4.3-maemo10) unstable; urgency=low
+
+  * Fix version number dependencies. 
+
+ -- Luciano Wolf <luciano.wolf@openbossa.org>  Tue, 12 May 2009 10:19:50 -0300
+
+python-qt4 (4.4.3-maemo9) unstable; urgency=low
+
+  * Create python2.5-qt4-xml package.
+  * Moving uic module to python2.5-qt4-gui.
+
+ -- Renato Filho <renato.filho@openbossa.org>  Mon, 22 Sep 2008 16:57:42 -0300
+
+python-qt4 (4.4.3-maemo8) unstable; urgency=low
+
+  * Fixed dependecy on python2.5-dbus.
+
+ -- Renato Filho <renato.filho@openbossa.org>  Mon, 22 Sep 2008 11:32:42 -0300
+
+python-qt4 (4.4.3-maemo7) unstable; urgency=low
+
+  * Fixed sip package name.
+
+ -- Renato Filho <renato.filho@openbossa.org>  Fri, 19 Sep 2008 14:12:11 -0300
+
+python-qt4 (4.4.3-maemo6) unstable; urgency=low
+
+  * Removing temporary files.
+
+ -- Renato Filho <renato.filho@openbossa.org>  Thu, 18 Sep 2008 19:15:54 -0300
+
+python-qt4 (4.4.3-maemo5) unstable; urgency=low
+
+  * Fix missing __init__.py file. 
+
+ -- Renato Filho <renato.filho@openbossa.org>  Wed, 18 Sep 2008 18:50:00 -0300
+
+python-qt4 (4.4.3-maemo4) unstable; urgency=low
+
+  * Splitting packages like c++;
+  * Updated dependecies;
+
+ -- Renato Filho <renato.filho@openbossa.org>  Wed, 17 Sep 2008 12:23:00 -0300
+
+python-qt4 (4.4.2-maemo4) unstable; urgency=low
+
+  * Splitting in smaller packages: Core, Gui, dev, dev-tools, dbus, extras.
+
+ -- Lauro Moura Maranhao Neto <lauro.neto@openbossa.org>  Sat, 13 Sep 2008 15:07:29 -0300
+
+python-qt4 (4.4.2-maemo3) unstable; urgency=low
+
+  * Moving back to quilt and fixing build issues (QSizeGrip, dbus)
+
+ -- Lauro Moura Maranhao Neto <lauro.neto@openbossa.org>  Wed, 10 Sep 2008 17:39:46 -0300
+
+python-qt4 (4.4.2-maemo2) unstable; urgency=low
+
+  * Update: moving to dpatch instead of quilt.
+
+ -- Lauro Moura Maranhao Neto <lauro.neto@openbossa.org>  Mon, 23 Jun 2008 14:12:44 -0300
+
+python-qt4 (4.4.2-maemo1) unstable; urgency=low
+
+  * Initial release
+
+ -- Lauro Moura Maranhao Neto <lauro.neto@openbossa.org>  Mon,  2 Jun 2008 10:18:32 -0300
+

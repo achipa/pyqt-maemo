@@ -1,0 +1,3 @@
+target = QtMaemo5
+sources = sipQtMaemo5cmodule.cpp sipQtMaemo5QMaemo5ValueButton.cpp sipQtMaemo5QMaemo5EditBar.cpp sipQtMaemo5QMaemo5TimePickSelector.cpp sipQtMaemo5QMaemo5DatePickSelector.cpp sipQtMaemo5QMaemo5ListPickSelector.cpp sipQtMaemo5QMaemo5AbstractPickSelector.cpp sipQtMaemo5QMaemo5InformationBox.cpp
+headers = sipAPIQtMaemo5.h

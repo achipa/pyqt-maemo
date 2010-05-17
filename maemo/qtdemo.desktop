@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=4.7
+Type=Application
+Name=PyQt Demo
+Exec=/usr/share/python2.5-qt4-doc/examples/demos/qtdemo/qtdemo.py -fullscreen
+Icon=qtdemo
+X-HildonDesk-ShowInToolbar=true
+X-Osso-Type=application/x-executable
+

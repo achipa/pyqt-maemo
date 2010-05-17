@@ -1,0 +1,4 @@
+maemo/qtdemo.desktop usr/share/applications/hildon
+maemo/qtdemo.png usr/share/icons/hicolor/26x26/apps
+doc usr/share/python2.5-qt4-doc
+examples usr/share/python2.5-qt4-doc

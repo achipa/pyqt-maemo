@@ -1,0 +1,4 @@
+examples/demos/qtdemo opt/pyqt/examples/demos/qtdemo
+maemo/*.desktop usr/share/applications/hildon
+maemo/*.png usr/share/icons/hicolor/26x26/apps
+

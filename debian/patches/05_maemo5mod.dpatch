@@ -1,0 +1,37 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## 03_qsizegrip_check.dpatch by  <renato@>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad pyqt~/configure.py pyqt/configure.py
+--- pyqt~/configure.py	(revision 72)
++++ pyqt/configure.py	(working copy)
+@@ -349,6 +349,7 @@
+         pyqt_modules.append("QtCore")
+ 
+         check_module("QtGui", "qwidget.h", "new QWidget()")
++        check_module("QtMaemo5", "qmaemo5informationbox.h", "new QMaemo5InformationBox()")
+         check_module("QtHelp", "qhelpengine.h", "new QHelpEngine(\"foo\")")
+         check_module("QtMultimedia", "QAudioDeviceInfo",
+                 "new QAudioDeviceInfo()")
+@@ -431,6 +432,9 @@
+                 generate_code("QtGui", extra_include_dirs=sp_incdirs,
+                         extra_lib_dirs=sp_libdirs, extra_libs=sp_libs)
+ 
++        if "QtMaemo5" in pyqt_modules:
++            generate_code("QtMaemo5")
++
+         if "QtHelp" in pyqt_modules:
+             generate_code("QtHelp")
+ 
+@@ -1447,6 +1451,7 @@
+         "QtSvg": ["QtGui"],
+         "QtTest": ["QtGui"],
+         "QtWebKit": ["QtNetwork", "QtGui"],
++        "QtMaemo5": ["QtGui", "QtCore"],
+         "QtXml": ["QtCore"],
+         "QtXmlPatterns": ["QtNetwork", "QtCore"],
+         "phonon": ["QtGui"],
+
