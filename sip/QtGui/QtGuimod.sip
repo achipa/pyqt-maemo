@@ -76,6 +76,7 @@ WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 %Include qabstractspinbox.sip
 %Include qabstractslider.sip
 %Include qabstracttextdocumentlayout.sip
+%Include qabstractkineticscroller.sip
 %Include qaction.sip
 %Include qactiongroup.sip
 %Include qapplication.sip

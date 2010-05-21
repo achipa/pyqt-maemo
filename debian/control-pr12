@@ -1,7 +1,7 @@
 Source: python-qt4
 Priority: extra
 Maintainer: Attila Csipa <maemo@csipa.in.rs>
-Build-Depends: debhelper (>= 5), dpatch, libqt4-dev (>= 4.6), libqt4-phonon (>= 4.6), sip4 (>= 4.10),  python2.5-sip4 (>= 4.10),  python2.5-sip4-dev (>= 4.10),  python2.5-dev (>= 2.5.1), python-dbus | libqtcore4, python2.5-dbus | libqt4-dbus (>= 4.6) , libdbus-1-dev (>= 1.0.2), libxext-dev, zlib1g-dev, libexpat1-dev, libqt4-phonon-dev (>= 4.6) | libqt4-phonon (>= 4.6), python2.5 (>= 2.5.4-1maemo5) | libqtcore4, libqt4-xmlpatterns (>=4.6)
+Build-Depends: debhelper (>= 5), dpatch, libqt4-dev (>= 4.6), libqt4-phonon (>= 4.6), sip4 (>= 4.10.2),  python2.5-sip4 (>= 4.10.2),  python2.5-sip4-dev (>= 4.10.2),  python2.5-dev (>= 2.5.1), python-dbus | libqtcore4, python2.5-dbus | libqt4-dbus (>= 4.6) , libdbus-1-dev (>= 1.0.2), libxext-dev, zlib1g-dev, libexpat1-dev, libqt4-phonon-dev (>= 4.6) | libqt4-phonon (>= 4.6), python2.5 (>= 2.5.4-1maemo5) | libqtcore4, libqt4-xmlpatterns (>=4.6)
 Standards-Version: 3.7.2
 Homepage: http://www.riverbankcomputing.co.uk/software/pyqt/
 Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-qt4/trunk/
@@ -89,7 +89,7 @@ XB-Maemo-Icon-26:
 Package: python2.5-qt4-common
 Section: libs
 Architecture: any
-Depends: ${shlibs:Depends}, python2.5 (>= 2.5.1), python2.5-sip4 (>= 4.10.0), python2.5 (>= 2.5.4-1maemo5) | libqtcore4
+Depends: ${shlibs:Depends}, python2.5 (>= 2.5.1), python2.5-sip4 (>= 4.10.2), python2.5 (>= 2.5.4-1maemo5) | libqtcore4
 Replaces: python-qt4
 Description: Shared files for PyQt4
  This package contains files that are shared between python-qt4
@@ -98,7 +98,7 @@ Description: Shared files for PyQt4
 Package: python2.5-qt4-dev
 Section: libdevel
 Architecture: any
-Depends: python2.5-sip4-dev (>= 4.10.0), python2.5-qt4-common (= ${binary:Version})
+Depends: python2.5-sip4-dev (>= 4.10.2), python2.5-qt4-common (= ${binary:Version})
 Replaces: python-qt4-dev
 Description: Development files for PyQt4
  This package contains the source SIP files from which the Python.
