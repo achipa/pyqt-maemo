@@ -4,7 +4,6 @@ import sys
 from PyQt4 import QtCore, QtGui, QtXml
 from colors import Colors
 try:
-    import i
     from PyQt4 import QtHelp
 except ImportError:
     Colors.debug(" - QtHelp not found")
